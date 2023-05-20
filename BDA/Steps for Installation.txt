@@ -1,0 +1,48 @@
+-----VIDEOS FOR ISTALLATION------------
+1. https://www.youtube.com/watch?v=g7Qpnmi0Q-s
+2. https://www.youtube.com/watch?v=mDjKiWAVI0o&t=1225s
+
+-----TO RESOLVE ERROR---
+3. https://www.youtube.com/watch?v=swtdwO6dxgE
+
+
+
+--------STEPS TO INSTALL------------
+I) Install Java---
+	a. Download Java 8 version from the given link below
+	b. https://www.oracle.com/in/java/technologies/javase/javase8-archive-downloads.html
+	c. Download jdk version 8 for windows X64
+	d. You will be redirected to a login page in oracle
+	e. Create an account for free then jdk file will be downloaded
+	f. Move it to c drive
+	g. Start installation--change file name to JAVA---after installation inside program file another folder as java with in which jdk is there.
+	Move that jdk to your created folder JAVA
+	h. Set environment variable 
+	select setting-systems-edit the system environment variable
+	i. Set java home and path. click ok and then close (refer vdo)
+	j. type cmd thetype java -version
+
+II)Install Hadoop---
+	a. https://hadoop.apache.org/releases.html link to download hadoop
+	b. Download the second latest version of hadoop
+	c. Select binary--- new page---select https://dlcdn.apache.org/hadoop/common/hadoop-3.2.4/hadoop-3.2.4.tar.gz to download
+	d. Move it c drive-extract then set configuration
+	e. Hadoop-3.2.4-etc-hadoop-core-site.xml,hdfs-site.xml,yarn-site.xml and mapred-site.xml and hadoop-env.cmd file to edit
+	f. Add the properties of each xml file provided in property file and change the version seeing your hadoop version
+	g. Create a newfolder as data within namenode and datanode
+	h. Hadoop-env file click edit and set java home path and close
+	i. Go to environment variable and add set home and path for hadoop(refer vdo)
+	j. Hadoop-3.2.4/bin folder config files are missing. Add them from the given config folder copy and paste(select skip while pasting)
+
+III) Check if hadoop is properly functioning
+
+	a. cmd- hdfs namenode -format
+	b. cd..  cd hadoop-3.2.4 cd sbin, type start-all.cmd
+	c. all daemons will start
+	d.  after installing hadoop 3.2.4 while running first time it is showing error deprecated: use of this script to execute hdfs command is deprecated. instead 	use the hdfs command for it. error: could not find or load main class. 
+	Solution is to remove the space in between your username in system.  If you type start-all.cmd only two daemons will start. 
+	e. To fix it go to hadoop-3.2.4-etc-hadoop-hadoop-env.cmd file edit . Goto last line and change the %username% and no space inbetween, Save and close.
+	f. cmd- hdfs namenode -format, type start-all.cmd
+
+
+	
